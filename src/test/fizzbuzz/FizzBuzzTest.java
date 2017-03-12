@@ -180,7 +180,7 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenBuzzWhen15ThenBuzz() throws FizzException
+	public void givenBuzzWhen15ThenBuzz() throws SpecialResponseException
 	{
 		// arrange
 		Fizz buzz = new Fizz(5, "Buzz");
@@ -191,7 +191,7 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenBuzzWhen10ThenBuzz() throws FizzException
+	public void givenBuzzWhen10ThenBuzz() throws SpecialResponseException
 	{
 		// arrange
 		Fizz buzz = new Fizz(5, "Buzz");
@@ -202,7 +202,7 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenBuzzWhen5ThenBuzz() throws FizzException
+	public void givenBuzzWhen5ThenBuzz() throws SpecialResponseException
 	{
 		// arrange
 		Fizz buzz = new Fizz(5, "Buzz");
@@ -213,7 +213,7 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenBuzzWhen2Then1() throws FizzException
+	public void givenBuzzWhen2Then1() throws SpecialResponseException
 	{
 		// arrange
 		Fizz buzz = new Fizz(5, "Buzz");
@@ -226,7 +226,7 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenBuzzWhen1Then1() throws FizzException
+	public void givenBuzzWhen1Then1() throws SpecialResponseException
 	{
 		// arrange
 		Fizz buzz = new Fizz(5, "Buzz");
@@ -239,7 +239,7 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenFizzWhen2Then2() throws FizzException
+	public void givenFizzWhen2Then2() throws SpecialResponseException
 	{
 		// arrange
 		Fizz fizz = new Fizz(3, "Fizz");
@@ -252,7 +252,7 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenFizzWhen1Then1() throws FizzException
+	public void givenFizzWhen1Then1() throws SpecialResponseException
 	{
 		// arrange
 		Fizz fizz = new Fizz(3, "Fizz");
@@ -265,7 +265,7 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenFizzWhen9ThenFizz() throws FizzException
+	public void givenFizzWhen9ThenFizz() throws SpecialResponseException
 	{
 		// arrange
 		Fizz fizz = new Fizz(3, "Fizz");
@@ -276,7 +276,7 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenFizzWhen6ThenFizz() throws FizzException
+	public void givenFizzWhen6ThenFizz() throws SpecialResponseException
 	{
 		// arrange
 		Fizz fizz = new Fizz(3, "Fizz");
@@ -287,7 +287,7 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenFizzWhen3ThenFizz() throws FizzException
+	public void givenFizzWhen3ThenFizz() throws SpecialResponseException
 	{
 		// arrange
 				Fizz fizz = new Fizz(3, "Fizz");
@@ -307,7 +307,7 @@ public class FizzBuzzTest
 		Throwable t = null;
 		try {
 			fizz.respondTo(number);
-		} catch (FizzException fe) {
+		} catch (SpecialResponseException fe) {
 			t = fe;
 		}
 		assert(t != null);

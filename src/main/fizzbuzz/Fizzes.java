@@ -53,7 +53,7 @@ public class Fizzes
 	{
 		try {
 			fizz.respondTo(number);
-		} catch (FizzException e) {
+		} catch (SpecialResponseException e) {
 			response += e.response();
 		}
 	}
