@@ -16,16 +16,32 @@ public class FizzBuzzTest
 {
 
 	@Test
-	public void testOneToHundredWithLineSeparator() {
+	public void testOneToFifteenWithLineSeparator() {
 		// arrange
-		Fizzes fizzes = new Fizzes();
+		String separator = System.getProperty("line.separator");
+		Fizzes fizzes = new Fizzes(separator);
 		fizzes.add(3, "Fizz");
 		fizzes.add(5, "Buzz");
-		String expectedResponse = "12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz1617Fizz19BuzzFizz2223FizzBuzz26Fizz2829FizzBuzz3132Fizz34BuzzFizz3738FizzBuzz41Fizz4344FizzBuzz4647Fizz49BuzzFizz5253FizzBuzz56Fizz5859FizzBuzz6162Fizz64BuzzFizz6768FizzBuzz71Fizz7374FizzBuzz7677Fizz79BuzzFizz8283FizzBuzz86Fizz8889FizzBuzz9192Fizz94BuzzFizz9798FizzBuzz";
+		String expectedResponse =
+				"1" + separator +
+						"2" + separator +
+						"Fizz" + separator +
+						"4" + separator +
+						"Buzz" + separator +
+						"Fizz" + separator +
+						"7" + separator +
+						"8" + separator +
+						"Fizz" + separator +
+						"Buzz" + separator +
+						"11" + separator +
+						"Fizz" + separator +
+						"13" + separator +
+						"14" + separator +
+						"FizzBuzz" + separator;
 		StringBuilder actualResponse = new StringBuilder();
 
 		// act
-		for ( int i = 1 ; i < 101 ; i++ ) {
+		for ( int i = 1 ; i < 16 ; i++ ) {
 			actualResponse.append(fizzes.respondTo(i));
 		}
 
