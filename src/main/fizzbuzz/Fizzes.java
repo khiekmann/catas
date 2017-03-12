@@ -17,6 +17,10 @@ public class Fizzes
 
 	public String respondTo(int number)
 	{
-		return String.valueOf(number);
+		StringBuilder builder = new StringBuilder();
+		for ( Fizz fizz : fizzes ) {
+			builder.append(fizz.respondTo(number));
+		}
+		return builder.toString();
 	}
 }

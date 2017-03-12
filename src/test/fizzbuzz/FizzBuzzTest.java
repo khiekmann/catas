@@ -23,7 +23,7 @@ public class FizzBuzzTest
 		fizzes.add(5, "Buzz");
 
 		// act
-		String response = fizzes.respondTo(1);
+		String response = fizzes.respondTo(3);
 
 		// assert
 		assertEquals("Fizz", response);
