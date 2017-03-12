@@ -8,7 +8,7 @@ import java.util.LinkedList;
  */
 public class Fizzes
 {
-	private LinkedList<Fizz> fizzes = new LinkedList();
+	private final LinkedList<Fizz> fizzes = new LinkedList();
 
 	public void add(int divisor, String specialResponse)
 	{

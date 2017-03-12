@@ -16,6 +16,42 @@ public class FizzBuzzTest
 {
 
 	@Test
+	public void testOneToHundredWithLineSeparator() {
+		// arrange
+		Fizzes fizzes = new Fizzes();
+		fizzes.add(3, "Fizz");
+		fizzes.add(5, "Buzz");
+		String expectedResponse = "12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz1617Fizz19BuzzFizz2223FizzBuzz26Fizz2829FizzBuzz3132Fizz34BuzzFizz3738FizzBuzz41Fizz4344FizzBuzz4647Fizz49BuzzFizz5253FizzBuzz56Fizz5859FizzBuzz6162Fizz64BuzzFizz6768FizzBuzz71Fizz7374FizzBuzz7677Fizz79BuzzFizz8283FizzBuzz86Fizz8889FizzBuzz9192Fizz94BuzzFizz9798FizzBuzz";
+		StringBuilder actualResponse = new StringBuilder();
+
+		// act
+		for ( int i = 1 ; i < 101 ; i++ ) {
+			actualResponse.append(fizzes.respondTo(i));
+		}
+
+		// assert
+		assertEquals(expectedResponse, actualResponse.toString());
+	}
+
+	@Test
+	public void testOneToHundred() {
+		// arrange
+		Fizzes fizzes = new Fizzes();
+		fizzes.add(3, "Fizz");
+		fizzes.add(5, "Buzz");
+		String expectedResponse = "12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz1617Fizz19BuzzFizz2223FizzBuzz26Fizz2829FizzBuzz3132Fizz34BuzzFizz3738FizzBuzz41Fizz4344FizzBuzz4647Fizz49BuzzFizz5253FizzBuzz56Fizz5859FizzBuzz6162Fizz64BuzzFizz6768FizzBuzz71Fizz7374FizzBuzz7677Fizz79BuzzFizz8283FizzBuzz86Fizz8889FizzBuzz9192Fizz94BuzzFizz9798FizzBuzz";
+		StringBuilder actualResponse = new StringBuilder();
+
+		// act
+		for ( int i = 1 ; i < 101 ; i++ ) {
+			actualResponse.append(fizzes.respondTo(i));
+		}
+
+		// assert
+		assertEquals(expectedResponse, actualResponse.toString());
+	}
+
+	@Test
 	public void givenFizzBuzzWhen30ThenFizzBuzz() {
 		// arrange
 		Fizzes fizzes = new Fizzes();
