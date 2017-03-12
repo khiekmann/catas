@@ -8,7 +8,19 @@ import java.util.LinkedList;
  */
 public class Fizzes
 {
-	private final LinkedList<Fizz> fizzes = new LinkedList();
+	private final LinkedList<Fizz> fizzes;
+	private final String separator;
+
+	public Fizzes()
+	{
+		this("");
+	}
+
+	public Fizzes(String separator)
+	{
+		this.fizzes = new LinkedList();
+		this.separator = separator;
+	}
 
 	public void add(int divisor, String specialResponse)
 	{
@@ -30,6 +42,6 @@ public class Fizzes
 			response = String.valueOf(number);
 		}
 
-		return response;
+		return response + separator;
 	}
 }
