@@ -7,17 +7,19 @@ public class Fizz
 {
 
 	private final int divisor;
+	private String specialResponse;
 
-	public Fizz(int divisor)
+	public Fizz(int divisor, String specialResponse)
 	{
 		this.divisor = divisor;
+		this.specialResponse = specialResponse;
 	}
 
 	public String respondTo(int number)
 	{
 		String response = String.valueOf(number);
 		if (multipleOf(number)) {
-			response = "Fizz";
+			response = specialResponse;
 		}
 		return response;
 	}
