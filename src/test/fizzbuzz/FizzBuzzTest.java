@@ -30,7 +30,7 @@ public class FizzBuzzTest
 	@Test
 	public void givenFizzWhen1Then1() {
 		// arrange
-		Fizz fizz = new Fizz();
+		Fizz fizz = new Fizz(3);
 
 		// act
 		String response = fizz.respondTo(1);
@@ -42,7 +42,7 @@ public class FizzBuzzTest
 	@Test
 	public void givenFizzWhen3ThenFizz() {
 		// arrange
-		Fizz fizz = new Fizz();
+		Fizz fizz = new Fizz(1);
 
 		// act
 		String response = fizz.respondTo(3);
