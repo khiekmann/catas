@@ -10,6 +10,7 @@ public class Fizzes
 {
 	private final LinkedList<Fizz> fizzes;
 	private final String separator;
+	private String response;
 
 	public Fizzes()
 	{
@@ -29,7 +30,7 @@ public class Fizzes
 
 	public String respondTo(int number)
 	{
-		String response = new String();
+		response = new String();
 		for ( Fizz fizz : fizzes ) {
 			try {
 				fizz.respondTo(number);
@@ -38,10 +39,26 @@ public class Fizzes
 			}
 		}
 
-		if (response.length() == 0) {
+		ifResponseEmptySetTo(number);
+		addSeperatorToResponse();
+
+		return response;
+	}
+
+	private void ifResponseEmptySetTo(int number)
+	{
+		if (reponseEmpty()) {
 			response = String.valueOf(number);
 		}
+	}
 
-		return response + separator;
+	private boolean reponseEmpty()
+	{
+		return response.length() == 0;
+	}
+
+	private void addSeperatorToResponse()
+	{
+		response += separator;
 	}
 }
