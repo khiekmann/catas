@@ -16,6 +16,20 @@ public class FizzBuzzTest
 {
 
 	@Test
+	public void givenFizzBuzzWhen3ThenFizz() {
+		// arrange
+		Fizzes fizzes = new Fizzes();
+		fizzes.add(3, "Fizz");
+		fizzes.add(5, "Buzz");
+
+		// act
+		String response = fizzes.respondTo(1);
+
+		// assert
+		assertEquals("Fizz", response);
+	}
+
+	@Test
 	public void givenFizzBuzzWhen1Then1() {
 		// arrange
 		Fizzes fizzes = new Fizzes();
