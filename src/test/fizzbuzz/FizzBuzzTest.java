@@ -44,7 +44,8 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenBuzzWhen5ThenBuzz() {
+	public void givenBuzzWhen5ThenBuzz() throws FizzException
+	{
 		// arrange
 		Fizz buzz = new Fizz(5, "Buzz");
 
@@ -56,7 +57,8 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenBuzzWhen1Then1() {
+	public void givenBuzzWhen1Then1() throws FizzException
+	{
 		// arrange
 		Fizz buzz = new Fizz(5, "Buzz");
 
@@ -68,7 +70,8 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenFizzWhen1Then1() {
+	public void givenFizzWhen1Then1() throws FizzException
+	{
 		// arrange
 		Fizz fizz = new Fizz(3, "Fizz");
 
@@ -80,7 +83,8 @@ public class FizzBuzzTest
 	}
 
 	@Test
-	public void givenFizzWhen3ThenFizz() {
+	public void givenFizzWhen3ThenFizz() throws FizzException
+	{
 		// arrange
 				Fizz fizz = new Fizz(3, "Fizz");
 
