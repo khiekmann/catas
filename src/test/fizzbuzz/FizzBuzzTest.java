@@ -16,6 +16,76 @@ public class FizzBuzzTest
 {
 
 	@Test
+	public void givenFizzBuzzWhen30ThenFizzBuzz() {
+		// arrange
+		Fizzes fizzes = new Fizzes();
+		fizzes.add(3, "Fizz");
+		fizzes.add(5, "Buzz");
+
+		// act
+		String response = fizzes.respondTo(30);
+
+		// assert
+		assertEquals("FizzBuzz", response);
+	}
+
+	@Test
+	public void givenFizzBuzzWhen15ThenFizzBuzz() {
+		// arrange
+		Fizzes fizzes = new Fizzes();
+		fizzes.add(3, "Fizz");
+		fizzes.add(5, "Buzz");
+
+		// act
+		String response = fizzes.respondTo(15);
+
+		// assert
+		assertEquals("FizzBuzz", response);
+	}
+
+	@Test
+	public void givenFizzBuzzWhen10ThenBuzz() {
+		// arrange
+		Fizzes fizzes = new Fizzes();
+		fizzes.add(3, "Fizz");
+		fizzes.add(5, "Buzz");
+
+		// act
+		String response = fizzes.respondTo(10);
+
+		// assert
+		assertEquals("Buzz", response);
+	}
+
+	@Test
+	public void givenFizzBuzzWhen5ThenBuzz() {
+		// arrange
+		Fizzes fizzes = new Fizzes();
+		fizzes.add(3, "Fizz");
+		fizzes.add(5, "Buzz");
+
+		// act
+		String response = fizzes.respondTo(5);
+
+		// assert
+		assertEquals("Buzz", response);
+	}
+
+	@Test
+	public void givenFizzBuzzWhen6ThenFizz() {
+		// arrange
+		Fizzes fizzes = new Fizzes();
+		fizzes.add(3, "Fizz");
+		fizzes.add(5, "Buzz");
+
+		// act
+		String response = fizzes.respondTo(6);
+
+		// assert
+		assertEquals("Fizz", response);
+	}
+
+	@Test
 	public void givenFizzBuzzWhen3ThenFizz() {
 		// arrange
 		Fizzes fizzes = new Fizzes();
@@ -27,6 +97,20 @@ public class FizzBuzzTest
 
 		// assert
 		assertEquals("Fizz", response);
+	}
+
+	@Test
+	public void givenFizzBuzzWhen2Then2() {
+		// arrange
+		Fizzes fizzes = new Fizzes();
+		fizzes.add(3, "Fizz");
+		fizzes.add(5, "Buzz");
+
+		// act
+		String response = fizzes.respondTo(2);
+
+		// assert
+		assertEquals(String.valueOf(2), response);
 	}
 
 	@Test
