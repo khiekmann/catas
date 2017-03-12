@@ -5,4 +5,8 @@ package fizzbuzz;
  */
 public class Fizz
 {
+	public String respondTo(int number)
+	{
+		return "Fizz";
+	}
 }
