@@ -18,19 +18,19 @@ public class FizzBuzzTest
 	@Test
 	public void givenBuzzWhen5ThenBuzz() {
 		// arrange
-		Fizz buzz = new Fizz(5);
+		Fizz buzz = new Fizz(5, "Buzz");
 
 		// act
 		String response = buzz.respondTo(5);
 
 		// assert
-		assertEquals("buzz", response);
+		assertEquals("Buzz", response);
 	}
 
 	@Test
 	public void givenBuzzWhen1Then1() {
 		// arrange
-		Fizz buzz = new Fizz(5);
+		Fizz buzz = new Fizz(5, "Buzz");
 
 		// act
 		String response = buzz.respondTo(1);
@@ -42,7 +42,7 @@ public class FizzBuzzTest
 	@Test
 	public void givenFizzWhen1Then1() {
 		// arrange
-		Fizz fizz = new Fizz(3);
+		Fizz fizz = new Fizz(3, "Fizz");
 
 		// act
 		String response = fizz.respondTo(1);
@@ -54,7 +54,7 @@ public class FizzBuzzTest
 	@Test
 	public void givenFizzWhen3ThenFizz() {
 		// arrange
-		Fizz fizz = new Fizz(1);
+				Fizz fizz = new Fizz(3, "Fizz");
 
 		// act
 		String response = fizz.respondTo(3);
