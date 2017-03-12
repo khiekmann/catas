@@ -50,10 +50,8 @@ public class FizzBuzzTest
 		Fizz buzz = new Fizz(5, "Buzz");
 
 		// act
-		String response = buzz.respondTo(5);
-
 		// assert
-		assertEquals("Buzz", response);
+		assertException(buzz, 5);
 	}
 
 	@Test
@@ -89,14 +87,24 @@ public class FizzBuzzTest
 				Fizz fizz = new Fizz(3, "Fizz");
 
 		// act
-		String response = fizz.respondTo(3);
 
 		// assert
-		assertEquals("Fizz", response);
+		assertException(fizz, 3);
 	}
 
 	@Test
 	public void sanity() {
 		assertTrue(true);
+	}
+
+	private void assertException(Fizz fizz, int number)
+	{
+		Throwable t = null;
+		try {
+			fizz.respondTo(number);
+		} catch (FizzException fe) {
+			t = fe;
+		}
+		assert(t != null);
 	}
 }

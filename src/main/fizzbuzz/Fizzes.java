@@ -25,6 +25,11 @@ public class Fizzes
 				response += e.response();
 			}
 		}
+
+		if (response.length() == 0) {
+			response = String.valueOf(number);
+		}
+
 		return response;
 	}
 }
