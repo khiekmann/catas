@@ -3,11 +3,11 @@ package fizzbuzz;
 /**
  * Created by HiekmaHe on 12.03.2017.
  */
-public class FizzException extends Throwable
+public class SpecialResponseException extends Throwable
 {
 	private final String response;
 
-	public FizzException(String specialResponse)
+	public SpecialResponseException(String specialResponse)
 	{
 		this.response = specialResponse;
 	}
