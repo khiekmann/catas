@@ -17,10 +17,14 @@ public class Fizzes
 
 	public String respondTo(int number)
 	{
-		StringBuilder builder = new StringBuilder();
+		String response = new String();
 		for ( Fizz fizz : fizzes ) {
-			builder.append(fizz.respondTo(number));
+			try {
+				fizz.respondTo(number);
+			} catch (FizzException e) {
+				response += e.response();
+			}
 		}
-		return builder.toString();
+		return response;
 	}
 }

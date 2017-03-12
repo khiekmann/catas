@@ -15,13 +15,12 @@ public class Fizz
 		this.specialResponse = specialResponse;
 	}
 
-	public String respondTo(int number)
+	public String respondTo(int number) throws FizzException
 	{
-		String response = String.valueOf(number);
 		if (multipleOf(number)) {
-			response = specialResponse;
+			throw new FizzException(specialResponse);
 		}
-		return response;
+		return String.valueOf(number);
 	}
 
 	private boolean multipleOf(int number)
