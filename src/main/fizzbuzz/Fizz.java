@@ -6,7 +6,12 @@ package fizzbuzz;
 public class Fizz
 {
 
-	private static final int divisor = 3;
+	private final int divisor;
+
+	public Fizz(int divisor)
+	{
+		this.divisor = divisor;
+	}
 
 	public String respondTo(int number)
 	{
