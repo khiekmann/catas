@@ -21,10 +21,10 @@ public class FizzBuzzTest
 		Fizz fizz = new Fizz();
 
 		// act
-		String response = fizz.respondTo(3);
+		String response = fizz.respondTo(1);
 
 		// assert
-		assertEquals(1, response);
+		assertEquals(String.valueOf(1), response);
 	}
 
 	@Test
