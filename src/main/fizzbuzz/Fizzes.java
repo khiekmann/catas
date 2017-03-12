@@ -31,18 +31,31 @@ public class Fizzes
 	public String respondTo(int number)
 	{
 		response = new String();
-		for ( Fizz fizz : fizzes ) {
-			try {
-				fizz.respondTo(number);
-			} catch (FizzException e) {
-				response += e.response();
-			}
-		}
-
-		ifResponseEmptySetTo(number);
-		addSeperatorToResponse();
-
+		responseEitherSpecialOr(number).finallyAppendSeperator();
 		return response;
+	}
+
+	private Fizzes responseEitherSpecialOr(int number)
+	{
+		setResponseToSpecialIfTriggeredFor(number);
+		ifResponseEmptySetTo(number);
+		return this;
+	}
+
+	private void setResponseToSpecialIfTriggeredFor(int number)
+	{
+		for ( Fizz fizz : fizzes ) {
+			ifResponseSpecialThenAppend(fizz, number);
+		}
+	}
+
+	private void ifResponseSpecialThenAppend(Fizz fizz, int number)
+	{
+		try {
+			fizz.respondTo(number);
+		} catch (FizzException e) {
+			response += e.response();
+		}
 	}
 
 	private void ifResponseEmptySetTo(int number)
@@ -57,7 +70,7 @@ public class Fizzes
 		return response.length() == 0;
 	}
 
-	private void addSeperatorToResponse()
+	private void finallyAppendSeperator()
 	{
 		response += separator;
 	}
