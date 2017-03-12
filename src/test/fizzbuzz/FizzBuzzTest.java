@@ -35,7 +35,7 @@ public class FizzBuzzTest
 						"Buzz" + separator +
 						"11" + separator +
 						"Fizz" + separator +
-						"13" + separator +
+						"Fizz" + separator +
 						"14" + separator +
 						"FizzBuzz" + separator;
 		StringBuilder actualResponse = new StringBuilder();
@@ -55,7 +55,7 @@ public class FizzBuzzTest
 		Fizzes fizzes = new Fizzes();
 		fizzes.add(3, "Fizz");
 		fizzes.add(5, "Buzz");
-		String expectedResponse = "12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz1617Fizz19BuzzFizz2223FizzBuzz26Fizz2829FizzBuzz3132Fizz34BuzzFizz3738FizzBuzz41Fizz4344FizzBuzz4647Fizz49BuzzFizz5253FizzBuzz56Fizz5859FizzBuzz6162Fizz64BuzzFizz6768FizzBuzz71Fizz7374FizzBuzz7677Fizz79BuzzFizz8283FizzBuzz86Fizz8889FizzBuzz9192Fizz94BuzzFizz9798FizzBuzz";
+		String expectedResponse = "12Fizz4BuzzFizz78FizzBuzz11FizzFizz14FizzBuzz1617Fizz19BuzzFizz22FizzFizzBuzz26Fizz2829FizzBuzzFizzFizzFizzFizzFizzBuzzFizzFizzFizzFizzBuzz41FizzFizz44FizzBuzz4647Fizz49BuzzFizzBuzzBuzzFizzBuzzFizzBuzzBuzzBuzzFizzBuzzBuzzBuzzFizzBuzz6162Fizz64BuzzFizz6768FizzBuzz71FizzFizz74FizzBuzz7677Fizz79BuzzFizz82FizzFizzBuzz86Fizz8889FizzBuzz9192Fizz94BuzzFizz9798FizzBuzz";
 		StringBuilder actualResponse = new StringBuilder();
 
 		// act
